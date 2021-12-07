@@ -1,0 +1,20 @@
+{%extends 'base.html'%}
+{%block title%} Register New User {%endblock%}
+{%block content%}
+<h1 class="text-center text-light mt-3">Register New User</h1>
+<form action="{{request.path}}" method="POST">
+    {{user_form.hidden_tag()}}
+    {{user_form.firstname.label(class="text-light fw-bold w-100 text-center m-2")}}<br>
+    {{user_form.firstname(class="form-control w-25 m-auto")}}<br>
+    {{user_form.lastname.label(class="text-light fw-bold w-100 text-center m-2")}}<br>
+    {{user_form.lastname(class="form-control w-25 m-auto")}}<br>
+    {{user_form.email.label(class="text-light fw-bold w-100 text-center m-2")}}<br>
+    {{user_form.email(class="form-control w-25 m-auto")}}<br>
+    {{user_form.country.label(class="text-light fw-bold w-100 text-center m-2")}}<br>
+    {{user_form.country(class="form-control w-25 m-auto")}}<br>
+    {{user_form.city.label(class="text-light fw-bold w-100 text-center m-2")}}<br>
+    {{user_form.city(class="form-control w-25 m-auto")}}<br>
+    {{user_form.submit(class="btn btn-primary d-block m-auto", title="Submit")}}
+</form>
+<a class="btn btn-danger ms-1 mb-5" href="/" title="Go Back">Back</a>
+{%endblock%}

@@ -1,0 +1,50 @@
+<html lang="en">
+
+<head>
+    {%block head%}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../static/styles.css" />
+    <title>{%block title%} {%endblock%}</title>
+    {%endblock%}
+</head>
+
+<body class="bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="display:flex;justify-content:space-between;">
+        <a href="/"><img src="/static/logo.gif" class="logo m-1" alt="Logo" title="Home" /></a>
+        <button class="navbar-toggler me-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <h1 class="text-light text-center mb-0 pb-1 h1">Flask + MySQL CRUD App</h1>
+            <a class="text-light fw-bold p-3 pe-4 add-new-user" href="/newuser" title="Add New User">Add New User</a>
+        </div>
+    </nav>
+    {%block content%}
+    {%endblock%}
+    <footer class="footer bg-primary">
+        <div class="text-light"> <a href="https://github.com/NikolaJohnny94" target="_blank"
+                title="Follow me on GitHub"><i class="fab fa-github icons github p-1"></i></a> <a
+                href="https://www.linkedin.com/in/nikola-ivanovi%C4%87-2b6a13179/" target="_blank"
+                title="Let's connect on LinkedIn"><i class="fab fa-linkedin-in icons linkedin p-1"></i></a>
+            <p class="fw-bold ps-2 pe-2">Developed by Nikola</p> <a href="https://codepen.io/NikolaJohnny/pens/public"
+                target="_blank" title="Follow me on CodePen"><i class="fab fa-codepen icons codepen p-1"></a></i><a
+                href="https://twitter.com/nikola8794pwd" target="_blank" title="Follow me on Twitter"><i
+                    class="fab fa-twitter icons twitter p-1"></i></a>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+{%extends 'base.html'%}
+{%block title%}{{user.firstname}} {{user.lastname}}{%endblock%}
+{%block content%}
+<h1 class="text-light text-center mt-5">{{user.firstname}} {{user.lastname}}</h1>
+<h2 class="text-light text-center">{{user.email}}</h2>
+<h3 class="text-light text-center">{{user.country}} ({{user.city}})</h3>
+<a class="btn btn-danger text-center mt-5 ms-1" href="/" title="Go Back">Back</a>
+{%endblock%}
