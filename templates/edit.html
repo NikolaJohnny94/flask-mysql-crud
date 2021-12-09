@@ -1,106 +1,113 @@
 {%extends 'base.html'%}
-{%block title%}Edit - {{user.firstname}} {{user.lastname}}{%endblock%}
+{%block title%}Edit | {{user.firstname}} {{user.lastname}}{%endblock%}
 {%block head%}
 {{super()}}
 <style type="text/css">
-.h1 {
-  margin-left: 27.5%;
-}
-
-#navbarText {
-  justify-content: space-between;
-}
-
-.logo {
-  width: 50px;
-  border-radius: 5px;
-}
-
-.message {
-  width: 180px;
-  height: 20px;
-  border-radius: 5px;
-  color: #fff;
-  background-color: green;
-  text-align: center;
-}
-
-.footer {
-  height: 35px;
-  position: fixed !important;
-  bottom: 0 !important;
-  width: 100% !important;
-}
-
-.footer > div {
-  display: flex !important;
-  justify-content: center !important;
-}
-
-.icons {
-  cursor: pointer;
-}
-
-.icons:active {
-  transform: scale(0.9);
-}
-
-.github {
-  color: #000;
-  font-size: 28px;
-}
-
-.codepen {
-  color: #fff;
-  font-size: 28px;
-}
-
-.linkedin {
-  color: #fff;
-  font-size: 28px;
-}
-
-.twitter {
-  color: #08a0e9;
-  font-size: 28px;
-}
-
-.footer > div > p {
-  font-style: italic;
-  font-size: 20px;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-}
-
-@media (min-width: 1367px) {
   .h1 {
-    margin-left: 33.5%;
+    margin-left: 27.5%;
   }
-}
 
-@media (min-width: 992px) and (max-width: 1366px) {
-  .h1 {
-    margin-left: 22%;
+  #navbarText {
+    justify-content: space-between;
   }
-}
 
-@media (max-width: 991px) {
-  .h1 {
-    width: 100%;
-    margin: 10px 0;
+  .logo {
+    width: 50px;
+    border-radius: 5px;
   }
-  .add-new-user {
-    display: block;
+
+  .message {
+    width: 180px;
+    height: 20px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: green;
     text-align: center;
   }
-  #firstname,
-  #lastname,
-  #email,
-  #country,
-  #city {
-    width: 75% !important;
-  }
-}
 
+  .footer {
+    height: 35px;
+    position: fixed !important;
+    bottom: 0 !important;
+    width: 100% !important;
+  }
+
+  .footer>div {
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .icons {
+    cursor: pointer;
+  }
+
+  .icons:active {
+    transform: scale(0.9);
+  }
+
+  .github {
+    color: #000;
+    font-size: 28px;
+  }
+
+  .codepen {
+    color: #fff;
+    font-size: 28px;
+  }
+
+  .linkedin {
+    color: #fff;
+    font-size: 28px;
+  }
+
+  .twitter {
+    color: #08a0e9;
+    font-size: 28px;
+  }
+
+  .footer>div>p {
+    font-style: italic;
+    font-size: 20px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  @media (min-width: 1367px) {
+    .h1 {
+      margin-left: 32%;
+    }
+  }
+
+  @media (min-width: 1024px) and (max-width: 1366px) {
+    .h1 {
+      margin-left: 30%;
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1023px) {
+    .h1 {
+      margin-left: 22%;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .h1 {
+      width: 100%;
+      margin: 10px 0;
+    }
+
+    .add-new-user {
+      display: block;
+      text-align: center;
+    }
+
+    #firstname,
+    #lastname,
+    #email,
+    #country,
+    #city {
+      width: 75% !important;
+    }
+  }
 </style>
 {%endblock%}
 {%block content%}
@@ -117,7 +124,7 @@
   {{user_form.country(value=user.country, class="form-control w-25 m-auto")}}<br>
   {{user_form.city.label(class="text-light fw-bold w-100 text-center m-2")}}<br>
   {{user_form.city(value=user.city, class="form-control w-25 m-auto")}}<br>
-  {{user_form.submit(class="btn btn-primary d-block m-auto", title="Update User Info")}}
+  {{user_form.submit(class="btn btn-primary d-block m-auto", title="Update User Info", value="Update")}}
 </form>
 <a class="btn btn-danger ms-1 mb-5" href="/" title="Go Back">Back</a>
 {%endblock%}
