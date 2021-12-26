@@ -13,11 +13,18 @@
 ## Project setup
 
 ```
-Setup you virtual environment [python -m venv venv] and then run pip install to install all dependencies.
+Setup you virtual environment [python -m venv venv] and then navigate to Scripts folder [cd ..venv/Scripts] and type activate.
 ```
 
-### Note
+```
+After virtual envirnment is activated, copy requirements.txt and paste it in the venv folder.
+Type in your terminal: pip install -r requirements.txt
+```
 
 ```
-In the ./env file add your SECRET_KEY and your MySQL host, DB name, username and password 🔗🧔🔐
+After all required dependencies are installed navigate to ./backend/.env file and add values to your SECRET_KEY your MySQL host, username, password and DB name 🔗🧔🔐
+```
+
+```
+Start the server 🐍
 ```
